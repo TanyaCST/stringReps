@@ -11,4 +11,13 @@ def PatternCount(text: str, pattern: str) -> int:
         PatternCount("AAAA", "AA") returns 3.
     """
     # TODO: Implement this function.
-    raise NotImplementedError("Implement PatternCount")
+
+    count = 0
+
+    for i in range(len(text)-len(pattern)):
+	if text[i:i+len(pattern)] == pattern:
+		count += 1
+
+    return count
+
+    # raise NotImplementedError("Implement PatternCount")
