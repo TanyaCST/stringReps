@@ -1,73 +1,59 @@
-# Frequent Words — Python package starter
+# Problem set 1
 
-Implement two functions for analyzing text (such as DNA sequences):
+Complete the four functions in `src/pset1/`. All imports are already provided.
+Replace each TODO comment and `raise NotImplementedError(...)` line with
+your code. Leave the imports and `__init__.py` as provided.
 
-- `PatternCount(text, pattern)`: count occurrences, including overlapping matches.
-- `FrequentWords(text, k)`: find all most frequent length-`k` substrings.
+| Function | File |
+| --- | --- |
+| `countNucleotides` | `src/pset1/count_nucleotides.py` |
+| `patternIndex` | `src/pset1/pattern_index.py` |
+| `patternCount` | `src/pset1/pattern_count.py` |
+| `frequentWords` | `src/pset1/frequent_words.py` |
 
-Both functions start as TODO stubs that raise `NotImplementedError`. Their
-docstrings describe the expected behavior and assumptions.
+Refer to the assignment for function requirements.
 
-## Package layout
+## Setup
 
-```text
-pyproject.toml                  # Package metadata and build configuration
-src/
-    frequent_words/
-        __init__.py             # Makes both functions available to import
-        pattern_count.py        # Implement PatternCount here
-        frequent_words.py       # Implement FrequentWords here
-```
-
-Separate `.py` files are called **modules**. A directory of related modules
-with an `__init__.py` file forms a Python **package**. Putting these functions
-in separate modules is valid Python practice; related small functions can
-also share a module.
-
-Python convention normally uses `pattern_count` and `frequent_words` for
-function names. This starter keeps `PatternCount` and `FrequentWords` to
-match the algorithm names used in class, while using lowercase module names.
-
-## Set up
-
-Use Python 3.10 or newer. From this repository's root directory:
+Use Python 3.10 or newer. Open a terminal in the repository root, the folder
+containing both `in-class/` and `pset-1/`. Run:
 
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -e .
+python -m pip install -e ./in-class -e ./pset-1
 ```
 
-On Windows, activate with `.venv\Scripts\activate` in Command Prompt or
-`.venv\Scripts\Activate.ps1` in PowerShell instead.
+If you already have a virtual environment, activate it and run just the
+install command. On Windows, use `python` instead of `python3` if needed;
+activate with `.venv\Scripts\activate` in Command Prompt or
+`.venv\Scripts\Activate.ps1` in PowerShell.
 
-An editable install (`-e`) means edits to the source files take effect without
-reinstalling the package. There are no runtime dependencies.
+The install command connects both local packages to your environment.
+The `-e` means edits in either folder take effect without reinstalling.
+Activate this same environment when you return to work in a new terminal.
+If using an editor, select this environment's Python interpreter there too.
 
-## Use your implementations
+## Imports
 
-After completing the TODOs, try this in Python:
+The in-class functions are already imported in the corresponding assignment
+files under these names:
+
+| Assignment file | Imported name | Source |
+| --- | --- | --- |
+| `pattern_count.py` | `inclass_pattern_count` | `PatternCount` in `in-class/src/frequent_words/pattern_count.py` |
+| `frequent_words.py` | `inclass_frequent_words` | `FrequentWords` in `in-class/src/frequent_words/frequent_words.py` |
+
+The `as` keyword in each import provides a local nickname for the imported
+function. The setup command above makes the in-class package available;
+no file copying or changes to Python's search path are needed.
+
+To import your assignment functions, start `python` in your activated
+environment and enter:
 
 ```python
-from frequent_words import FrequentWords, PatternCount
-
-print(PatternCount("AAAA", "AA"))  # Expected: 3
-print(FrequentWords("ATAT", 2))    # Expected: {"AT"}
+from pset1 import countNucleotides, patternIndex, patternCount, frequentWords
 ```
 
-All package imports are already set up. Students only need to replace the
-TODO comments and `raise NotImplementedError(...)` lines with their code.
-Inside `FrequentWords`, call `PatternCount(text, pattern)` directly; its
-import is already included at the top of the file:
-
-```python
-from .pattern_count import PatternCount
-```
-
-The leading dot means “from another module in this package.” Leave this
-line and `__init__.py` as provided. After setup, start Python with `python`
-in the terminal and use the example above to call your functions. Running
-the individual source files directly is not how this package is used.
-
-Check overlapping matches, ties, empty text, and patterns or words longer
-than the text. Set output order is not guaranteed.
+Use the package imports instead of running individual source files directly.
+Unfinished stubs raise `NotImplementedError` when called.
