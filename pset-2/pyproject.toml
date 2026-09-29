@@ -3,12 +3,12 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "frequent-words"
+name = "csc258-pset2"
 version = "0.1.0"
-description = "A small package for counting patterns and finding frequent words."
+description = "CSC258 problem set 2 starter code."
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = ["frequent-words==0.1.0"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

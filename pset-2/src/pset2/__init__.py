@@ -1,4 +1,4 @@
-"""Problem set 1 functions."""
+"""Problem set 2 functions."""
 
 from .count_nucleotides import countNucleotides
 from .pattern_index import patternIndex
