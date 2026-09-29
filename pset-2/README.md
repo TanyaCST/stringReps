@@ -1,5 +1,5 @@
 # Problem Set 2
-Due date: Thursday, Oct 1
+Due date: Sunday, October 4, 2026, at 11:59 p.m.
 
 For this assignment, you are asked to complete the next four problems on Rosalind (5-8).
 Each problem matches with one of the four functions in `src/pset2/`, with all of the imports you are expected to need already provided.
