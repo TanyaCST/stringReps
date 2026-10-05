@@ -1,8 +1,9 @@
-from frequent_words import FrequentWords as inclass_frequent_words
+# from frequent_words import FrequentWords as inclass_frequent_words
 
 
-def frequentWords(text: str, k: int) -> set[str]:
+def frequentWords(text: str, k: int):
 	frequency_dict = {}
+
 	for i in range(len(text)):
 		pattern = text[i:i+k]
 		if pattern not in frequency_dict.keys():
@@ -19,5 +20,24 @@ def frequentWords(text: str, k: int) -> set[str]:
 	for pat in frequency_dict.keys():
 		if frequency_dict[pat] == max_frequency:
 			most_frequent.append(pat)
+
+	output = ""
+
+	for i in range(len(most_frequent)):
+		output += most_frequent[i]
+		if (i+1) < len(most_frequent):
+			output += " "
+
+	return output
 	
-	return most_frequent
+
+with open("rosalind_ba1b.txt", "r") as file:
+	str_list = []
+	for line in file:
+		line = line.rstrip()
+		str_list.append(line)
+
+	text = str_list[0]
+	k = int(str_list[1])
+
+print(frequentWords(text, k))
