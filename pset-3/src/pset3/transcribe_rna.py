@@ -6,5 +6,11 @@ def transcribeRNA(text: str) -> str:
 
     Replace each T with U, retaining the order of the other nucleotides.
     """
-    # TODO: Implement DNA-to-RNA transcription.
-    raise NotImplementedError("Implement transcribeRNA for Rosalind RNA.")
+    rna = ""
+    for i in range(len(text)):
+        if text[i] == "T":
+            rna += "U"
+        else:
+            rna += text[i]
+
+    return rna
