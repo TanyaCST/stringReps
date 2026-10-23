@@ -22,6 +22,7 @@ def approximatePatternMatching(pattern: str, text: str, d: int) -> int:
 def frequentWordsWithMismatches(text: str, k: int, d: int) -> set[str]:
     all_kmer = {}
 
+    # Generate all possible kmers 
     for kmer in itertools.product("ACGT", repeat = k):
         all_kmer["".join(kmer)] = 0
 
