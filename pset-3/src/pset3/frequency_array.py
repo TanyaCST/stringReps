@@ -49,14 +49,14 @@ def frequencyArray(text: str, k: int) -> list[int]:
 
     return all_kmers.values()
 
-with open("rosalind_test/rosalind_ba1k.txt", "r") as file:
-	str_list = []
-	for line in file:
-		line = line.rstrip()
-		str_list.append(line)
+# with open("rosalind_test/rosalind_ba1k.txt", "r") as file:
+# 	str_list = []
+# 	for line in file:
+# 		line = line.rstrip()
+# 		str_list.append(line)
 
-	text = str_list[0]
-	k = int(str_list[1])
+# 	text = str_list[0]
+# 	k = int(str_list[1])
 
-print(" ".join(map(str, frequencyArray(text, k))))
+# print(" ".join(map(str, frequencyArray(text, k))))
 

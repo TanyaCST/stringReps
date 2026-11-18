@@ -35,14 +35,14 @@ def findClumps(genome: str, k: int, L: int, t: int) -> set[str]:
     return clumps
 
 
-with open("rosalind_test/rosalind_ba1e.txt", "r") as file:
-	str_list = []
-	for line in file:
-		line = line.rstrip()
-		str_list.append(line)
+# with open("rosalind_test/rosalind_ba1e.txt", "r") as file:
+# 	str_list = []
+# 	for line in file:
+# 		line = line.rstrip()
+# 		str_list.append(line)
 
-	text = str_list[0]
-	numbers = str_list[1]
-	k, L, t = numbers.split()
+# 	text = str_list[0]
+# 	numbers = str_list[1]
+# 	k, L, t = numbers.split()
 
-print(" ".join(sorted(findClumps(text, int(k), int(L), int(t)))))
+# print(" ".join(sorted(findClumps(text, int(k), int(L), int(t)))))
