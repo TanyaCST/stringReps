@@ -1,6 +1,27 @@
 """Rosalind BA1K: Generate the Frequency Array of a String."""
 import itertools
 
+def PatternCount(text: str, pattern: str) -> int:
+    """Return the number of occurrences of pattern in text.
+
+    Matches are case-sensitive and may overlap. Assume pattern is nonempty.
+    Return 0 if pattern is longer than text or text is empty.
+
+    Example:
+        PatternCount("AAAA", "AA") returns 3.
+    """
+    # TODO: Implement this function.
+
+    count = 0
+
+    for i in range(len(text)-len(pattern)):
+        if text[i:i+len(pattern)] == pattern:
+            count += 1
+
+    return count
+
+    # raise NotImplementedError("Implement PatternCount")
+
 def frequencyArray(text: str, k: int) -> list[int]:
     """Return counts for all 4**k DNA k-mers in lexicographic order.
 
@@ -38,3 +59,4 @@ with open("rosalind_test/rosalind_ba1k.txt", "r") as file:
 	k = int(str_list[1])
 
 print(" ".join(map(str, frequencyArray(text, k))))
+
