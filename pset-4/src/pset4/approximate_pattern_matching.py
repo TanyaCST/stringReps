@@ -17,13 +17,13 @@ def approximatePatternMatching(pattern: str, text: str, d: int) -> list[int]:
 
     return indices
 
-with open("tests/rosalind_ba1h.txt", "r") as file:
-	str_list = []
-	for line in file:
-		line = line.rstrip()
-		str_list.append(line)
+# with open("tests/rosalind_ba1h.txt", "r") as file:
+# 	str_list = []
+# 	for line in file:
+# 		line = line.rstrip()
+# 		str_list.append(line)
 
-	pattern = str_list[0]
-	text = str_list[1]
+# 	pattern = str_list[0]
+# 	text = str_list[1]
 
-print(" ".join(map(str, approximatePatternMatching(pattern, text, int(str_list[2])))))
+# print(" ".join(map(str, approximatePatternMatching(pattern, text, int(str_list[2])))))

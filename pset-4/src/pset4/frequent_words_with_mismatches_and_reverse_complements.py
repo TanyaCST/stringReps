@@ -73,14 +73,14 @@ def frequentWordsWithMismatchesAndReverseComplements(text: str, k: int, d: int) 
     return max_pattern
 
 
-with open("tests/rosalind_ba1j.txt", "r") as file:
-	str_list = []
-	for line in file:
-		line = line.rstrip()
-		str_list.append(line)
+# with open("tests/rosalind_ba1j.txt", "r") as file:
+# 	str_list = []
+# 	for line in file:
+# 		line = line.rstrip()
+# 		str_list.append(line)
 
-	text = str_list[0]
-	numbers = str_list[1]
-	k, d = numbers.split()
+# 	text = str_list[0]
+# 	numbers = str_list[1]
+# 	k, d = numbers.split()
 
-print(" ".join(map(str, frequentWordsWithMismatchesAndReverseComplements(text, int(k), int(d)))))
+# print(" ".join(map(str, frequentWordsWithMismatchesAndReverseComplements(text, int(k), int(d)))))
